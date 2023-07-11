@@ -1,0 +1,46 @@
+.bannerlogo{
+  width: 30%;
+}
+.toprow{
+  padding-top: 5px;
+}
+.bannerword h1 {
+  text-align: center;
+}
+.toprow {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.col-3:first-child {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.col-3:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.form-group{
+  padding-top: 10px;
+}
+.btn.submit{
+  margin-top: 10px;
+}
+.lable {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* input {
+  font-size: 14px;
+  height: 30px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+} */
+
+

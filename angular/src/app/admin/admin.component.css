@@ -1,0 +1,165 @@
+.bannerlogo{
+  width: 30%;
+}
+.toprow{
+  padding-top: 5px;
+}
+.bannerword h1 {
+  text-align: center;
+}
+.toprow {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.col-3:first-child {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.col-3:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn{
+  background-color: #4CAF50; /* Green */
+  margin: 0px 15px 5px 5px;
+  border: 15px;
+  color: white;
+  padding: 13px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: auto;
+  border-radius: 12px;
+}
+select {
+  font-size: 15px;
+  width: 20%;
+  margin: 0 auto;
+}
+.databtninput{
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+}
+table {
+  text-align:center;
+}
+.no-border {
+  border: none !important;
+}
+table td, table th {
+  vertical-align: middle;
+}
+
+
+
+
+.toggler-wrapper {
+	display: block;
+	width: 45px;
+	height: 25px;
+	cursor: pointer;
+	position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+	display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+	background-color: #44cc66;
+}
+
+.toggler-wrapper .toggler-slider {
+	background-color: #ccc;
+	position: absolute;
+	border-radius: 100px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+	position: absolute;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.toggler-wrapper.style-27 {
+	width: 54px;
+	height: 30px;
+}
+
+.toggler-wrapper.style-27 input[type="checkbox"]:checked+.toggler-slider .toggler-knob:before {
+	left: -100%;
+}
+
+.toggler-wrapper.style-27 input[type="checkbox"]:checked+.toggler-slider .toggler-knob:after {
+	right: 3px;
+}
+
+.toggler-wrapper.style-27 .toggler-knob {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.toggler-wrapper.style-27 .toggler-knob:before {
+	content: 'No';
+	position: absolute;
+	width: calc(30px - 6px);
+	height: calc(30px - 6px);
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+	background-color: #fff;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-size: 75%;
+	font-weight: 500;
+}
+
+.toggler-wrapper.style-27 .toggler-knob:after {
+	content: 'Yes';
+	position: absolute;
+	width: calc(30px - 6px);
+	height: calc(30px - 6px);
+	border-radius: 50%;
+	right: -100%;
+	top: 3px;
+	background-color: #fff;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-size: 75%;
+	font-weight: 500;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20%;
+}

@@ -1,0 +1,65 @@
+<div class="header">
+  <div class="container">
+    <div class="row topword">
+      <div class="col-3">
+        <h1>福智校友會</h1>
+      </div>
+      <div class="col-5">
+        <p></p>
+      </div>
+      <div class="col-4" style="text-align: right;">
+        <a href="https://www.facebook.com/groups/bwhsalumni/">
+          <img class="bannericon" src="assets/images/facebookicon.jpg" alt="" />
+        </a>
+        <a href="https://www.instagram.com/bwsh_alumni/">
+          <img class="bannericon" src="assets/images/Instagramicon.jpg" alt="" />
+        </a>
+        <a href="mailto:bwshalumni@gmail.com">
+          <img class="bannericon" src="assets/images/gmailicon.jpg" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="row topmenu">
+      <div class="col-8 userpick">
+        <ul class="menu">
+          <li><a href="#">首頁</a></li>
+          <li>/</li>
+          <li><a href="#">最新消息</a></li>
+          <li>/</li>
+          <li><a>關於校友會</a>
+            <ul class="submenu">
+              <li><a href="#">校友會簡介</a></li>
+              <li><a href="#">校友會財務專區</a></li>
+            </ul>
+          </li>
+          <li>/</li>
+          <li><a href="#">校友學習</a></li>
+          <li>/</li>
+          <li><a>校友活動</a>
+            <ul class="submenu">
+              <li><a href="#">活動歷史紀錄</a></li>
+            </ul>
+          </li>
+          <li>/</li>
+          <li><a [routerLink]="['/inquire']">返校管道</a></li>
+        </ul>
+        <script>
+          const menu = document.querySelector('.menu');
+          menu.addEventListener('mouseover', function (event) {
+            if (event.target.tagName === 'A') {
+              event.target.nextElementSibling.style.display = 'block';
+            }
+          });
+          menu.addEventListener('mouseout', function (event) {
+            if (event.target.tagName === 'A') {
+              event.target.nextElementSibling.style.display = 'none';
+            }
+          });
+        </script>
+      </div>
+      <div class="col-4" style="text-align: right;">
+        <p>B.W.S.H. ALUMNI ASSOCIATION</p>
+      </div>
+    </div>
+  </div>
+</div>

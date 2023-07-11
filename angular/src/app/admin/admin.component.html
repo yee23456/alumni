@@ -1,0 +1,86 @@
+<div class="bg-gray">
+  <div class="header">
+    <div class="container">
+      <div class="row toprow">
+        <div class="col-3">
+          <img class="bannerlogo" src="assets/images/LOGO.jpg" alt="" />
+        </div>
+        <div class="col-6 bannerword">
+          <h1>管理員頁面</h1>
+        </div>
+        <div class="col-3">
+          <ul class="menu">
+            <li><button [routerLink]="['/user']">User</button></li>
+            <li><button [routerLink]="['/inquire']">Inquire</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="datainput">
+    <div class="container">
+      <div class="row databtninput">
+        <div class="col-6">
+          <!-- <button class="btn btn-primary" (click)="onGetClientData()">顯示資訊</button> -->
+        </div>
+        <div class="col-6">
+          <label>月份:</label>
+          <select [(ngModel)]="selectedMonth">
+            <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about">
+    <div class="container">
+      <div class="row">
+        <table class="table table-bordered" *ngIf="data">
+          <thead class="thead-dark">
+            <tr class="table-info">
+              <th scope="col">ID</th>
+              <th scope="col">姓名</th>
+              <th scope="col">電話</th>
+              <th scope="col">第幾屆</th>
+              <th scope="col">進入時間</th>
+              <th scope="col">離開時間</th>
+              <th scope="col">人數</th>
+              <th scope="col">陪同者姓名、電話</th>
+              <th scope="col">是否同意</th>
+              <th scope="col">刪除</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of client">
+              <th scope="col">{{ item.id }}</th>
+              <td>{{ item.name }}</td>
+              <td>{{ item.phone }}</td>
+              <td>{{ item.generation }}</td>
+              <td>{{ item.checkIn }}</td>
+              <td>{{ item.checkOut }}</td>
+              <td>{{ item.numberOfPeople }}</td>
+              <td>
+                <ul>
+                  <li *ngFor="let r of item.companion">
+                    {{ r.name }}
+                    {{ r.phone }}
+                  </li>
+                </ul>
+              </td>
+              <td class="flex-center">
+                <label class="toggler-wrapper style-27">
+                  <input type="checkbox" [(ngModel)]="item.yesNo" (ngModelChange)="onModifyData(item.id, item)">
+                  <div class="toggler-slider">
+                    <div class="toggler-knob"></div>
+                  </div>
+                </label>
+              </td>
+              <td><button class="btn btn-primary" (click)="onDeleteData(item.id)" id="delete">delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

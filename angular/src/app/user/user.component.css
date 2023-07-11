@@ -1,0 +1,20 @@
+.body{
+  margin-top: 70px;
+}
+.body .body_word{
+  margin-left: 30px;
+  padding-left: 20px;
+}
+.body .body_word h2{
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  margin: 15px 0px ;
+
+}
+.photo_circle{
+  width: 35%;
+}
+.body_mid{
+  margin-top: 70px;
+}
+

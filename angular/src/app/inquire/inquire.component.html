@@ -1,0 +1,88 @@
+<app-banner></app-banner>
+<div class="header">
+  <div class="container">
+    <div class="row toprow">
+      <div class="col-3">
+      </div>
+      <div class="col-6 bannerword">
+        <h1>入園申請</h1>
+      </div>
+      <div class="col-3">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="body">
+  <div class="container">
+    <div class="row">
+      <form (ngSubmit)="onSubmit()">
+        <div class="row form-group requird">
+          <p class="col-md-3"></p>
+          <label for="inputname" class="col-md-2 control-label text-md-right lable">中文姓名</label>
+          <div class="col-md-4">
+            <input type="text" name="NA" class="form-control" id="Name" placeholder="請填寫全名">
+          </div>
+        </div>
+        <div class="row form-group requird">
+          <p class="col-md-3"></p>
+          <label for="inputphone" class="col-md-2 control-label text-md-right lable">電話</label>
+          <div class="col-md-4">
+            <input type="text" name="name" class="form-control" id="phone" placeholder="格式0912345678">
+          </div>
+        </div>
+        <div class="row form-group requird">
+          <p class="col-md-3"></p>
+          <label for="inputGeneration" class="col-md-2 control-label text-md-right lable">第幾屆畢業生</label>
+          <div class="col-md-3">
+            <input type="text" name="Gati" class="form-control" id="Generation" placeholder="">
+          </div>
+        </div>
+        <div class="row form-group requird">
+          <p class="col-md-3"></p>
+          <label for="inputCheckIn" class="col-md-2 control-label text-md-right lable">預計進園日期</label>
+          <div class="col-md-2">
+            <input type="date" [min]="today" name="CI" class="form-control" id="CheckIn" placeholder="">
+          </div>
+        </div>
+        <div class="row form-group requird">
+          <p class="col-md-3"></p>
+          <label for="inputCHeckOut" class="col-md-2 control-label text-md-right lable">預計離園日期</label>
+          <div class="col-md-2">
+            <input type="date" name="CO" [min]="today" class="form-control" id="CHeckOut" placeholder="">
+          </div>
+        </div>
+        <div class="row form-group requird">
+          <p class="col-md-3"></p>
+          <label for="inputNumberOfPeople" class="col-md-2 control-label text-md-right lable">入園人數</label>
+          <div class="col-md-2">
+            <input type="text" [(ngModel)]="numberOfPeople" name="NB" class="form-control" id="NumberOfPeople"
+              placeholder="包含自己喔~">
+          </div>
+        </div>
+        <div *ngFor="let i of getArray()">
+          <div class="row">
+            <p class="col-md-3"></p>
+            <label for="num" class="col-md-3">{{ i + 1 }}</label>
+          </div>
+          <div class="row form-group requird">
+            <p class="col-md-3"></p>
+            <label for="inputaccompanyPeople" class="col-md-2 control-label text-md-right lable">陪同者姓名</label>
+            <div class="col-md-4">
+              <input type="text" name="name" class="form-control" id="accompany" placeholder="請填寫全名">
+            </div>
+          </div>
+          <div class="row form-group requird">
+            <p class="col-md-3"></p>
+            <label for="inputaccompanyPhone" class="lable col-md-2 control-label text-md-right ">陪同者電話</label>
+            <div class="col-md-3">
+              <input type="text" name="PH" class="form-control" id="accompanyphone" placeholder="格式0912345678">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex">
+          <button class="btn btn-success ms-auto submit" type="submit" id="submit">表單提交</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

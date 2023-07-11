@@ -1,0 +1,50 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  font-size: 25px;
+}
+.bg-green{
+    background: #2ebd59;
+}
+.bg-black{
+    background: #282b2f;
+}
+.music{
+    display: block;
+    padding: 20px 30px;
+    color: #fff;
+}
+.music .title{
+    padding-bottom: 45px;
+    padding-top: 45px;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: bold;;
+
+}
+.music.sub-title{
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.spotify_btn{
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 2px;
+  transition-duration: 0.2s;
+}
+.spotify_btn:hover{
+  background: #fff;
+}
+.spotify_btn:hover.btn-green{
+  color: #2ebd59;
+}
+.spotify_btn:hover.btn-black{
+  color: #282b2f;
+}

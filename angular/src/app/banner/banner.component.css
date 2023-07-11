@@ -1,0 +1,74 @@
+.bannericon{
+  width: 10%;
+  margin-right:5px;
+}
+h1{
+  font-family:Microsoft JhengHei;
+}
+.topword{
+  padding: 50px 0px 15px;
+}
+.topmenu {
+  font-size: 16px;
+}
+.topmenu .col-4{
+  font-size: 14px;
+  display: block;
+  white-space: nowrap;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.menu li a {
+  color: #000000;
+  display: block;
+  padding: 0px 10px;
+  text-decoration: none;
+
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  min-width: 150px; /* 設置子選單的最小寬度 */
+  border-radius: 5px;
+  border: #949494 solid 1px;
+  background-color: transparent; /* 設置子選單的背景顏色為透明 */
+}
+
+.submenu li {
+  border-bottom: #ccc 1px solid;
+}
+
+.submenu li:last-child {
+  border-bottom: none;
+}
+
+.submenu li a {
+  display: block;
+  padding: 2px 5px;
+  background-color: #fff; /* 設置子選單項目的背景顏色 */
+}
+
+.submenu li:hover > a {
+  background-color: #929191;
+  color: #fff;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
